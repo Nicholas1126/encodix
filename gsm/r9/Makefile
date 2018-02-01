@@ -6,11 +6,11 @@ DIR_BIN = ./bin
 SRC = $(wildcard ${DIR_SRC}/*.c)  
 OBJ = $(patsubst %.c,${DIR_OBJ}/%.o,$(notdir ${SRC})) 
 
-TARGET = r9
+TARGET = gsmencodix
 
 BIN_TARGET = ${DIR_BIN}/${TARGET}
 
-CC = gcc
+CC = afl-gcc
 CFLAGS = -g -Wall -I${DIR_INC}
 
 .PHONY:all
